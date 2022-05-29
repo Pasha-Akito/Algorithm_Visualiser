@@ -1,3 +1,16 @@
+<template>
+  <div>
+    <header>
+      <h1>{{ message }}</h1>
+      <p>Count is: {{ counter.count }}</p>
+    </header>
+ 
+  <router-view></router-view>
+
+ </div>
+
+</template>
+
 <script>
 export default {
   data(){
@@ -11,14 +24,6 @@ export default {
 }
 </script>
 
-<template>
-  <h1>{{ message }}</h1>
-  <p>Count is: {{ counter.count }}</p>
-</template>
+<style> 
 
-
-<style>
-.title {
-  color: red;
-}
 </style>
