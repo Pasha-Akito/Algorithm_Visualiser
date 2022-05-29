@@ -2,9 +2,11 @@ import { createApp } from 'vue'
 import App from './App.vue'
 import { createRouter, createWebHashHistory} from 'vue-router'
 import Home from './components/Home.vue'
+import Sorting from './components/Sorting.vue'
 
 const routes = [
     { path: '/', component: Home },
+    { path: '/sorting', component: Sorting }
 ]
 
 // creating router instance and passing to the 'routes' option

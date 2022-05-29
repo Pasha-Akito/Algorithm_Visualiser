@@ -1,10 +1,11 @@
 <template>
   <div>
     <header>
-      <h1>{{ message }}</h1>
-      <p>Count is: {{ counter.count }}</p>
+      <h3><router-link to="/">Home</router-link></h3>
+      <h3><router-link to="sorting">Sorting Algorithms</router-link></h3>
+      <p>Testing out message in App.vue inbetween components: {{ message }}</p>
     </header>
- 
+
   <router-view></router-view>
 
  </div>
