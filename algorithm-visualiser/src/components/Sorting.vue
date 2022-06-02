@@ -1,8 +1,10 @@
 <template>
 
     <div v-for="value in array">
-        <div class="array__bar">
-            {{ value }}
+        <div class="array__bar" :style="{height: value + 'px'}">
+            <div class="array__dot" :style="{height: (value - 3) + 'px'}">
+               {{ value }}
+            </div>
         </div>
     </div>
 
@@ -19,14 +21,11 @@ const array = ref([])
 // creating function to populate array with random values at random intervals
 function populateArray() {
     // 10 values in array (for time being)
-    for (let i = 0; i < 10; i++) {
+    for (let i = 0; i < 400; i++) {
         array.value.push(randomIntFromInterval(10, 1000))
     }
     console.log(array.value)
 }
-
-const parentMessage = ref('Parent')
-const items = ref([{ message: 'Foo' }, { message: 'Bar' }])
 
 // From https://stackoverflow.com/questions/4959975/generate-random-number-between-two-numbers-in-javascript
 function randomIntFromInterval(min, max) { // min and max included 
@@ -44,11 +43,16 @@ onMounted(() => {
 
 <style>
 .array__bar {
-    width: 10px;
-    height: 100px;
-    background-color: coral;
+    width: 3px;
+    background-color: rgb(255, 0, 0);
     display: flex;
-    margin: 10px;
+    margin: 0.5px;
+}
+
+.array__dot {
+    width: 3px;
+    background-color: rgb(136, 223, 114);
+    display: flex;
 }
 
 .array__container {
